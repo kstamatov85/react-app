@@ -1,0 +1,12 @@
+version: '3'
+services:
+  express-server:
+    container_name: react-dc
+    restart: always
+    build: .
+    command: npm run start
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/usr/app
+      - /usr/app/node_modules
